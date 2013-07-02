@@ -14,7 +14,7 @@ describe "lapis.cmd.nginx", ->
 
   it "should read environment variable", ->
     unless pcall -> require "posix"
-      pending "lposix is required for cmd.nginx specs"
+      pending "luaposix is required for cmd.nginx specs"
       return
 
     posix = require "posix"
