@@ -1,5 +1,6 @@
 local url = require("socket.url")
 local json = require("cjson")
+local date = require("date")
 local concat, insert = table.concat, table.insert
 local floor = math.floor
 local unescape, escape, escape_pattern, inject_tuples, parse_query_string, encode_query_string, parse_content_disposition, parse_cookie_string, slugify, underscore, camelize, uniquify, trim, trim_all, trim_filter, key_filter, json_encodable, to_json, build_url, time_ago, time_ago_in_words
@@ -260,10 +261,6 @@ build_url = function(parts)
   return out
 end
 do
-  local date
-  pcall(function()
-    date = require("date")
-  end)
   time_ago = function(time)
     local diff = date.diff(date(true), date(time))
     local times = { }

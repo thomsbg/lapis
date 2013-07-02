@@ -18,6 +18,7 @@ dependencies = {
 	"lpeg",
 	"luasocket",
 	"lua-cjson",
+	"date"
 }
 
 build = {

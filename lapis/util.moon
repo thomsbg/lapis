@@ -1,6 +1,7 @@
 
 url = require "socket.url"
 json = require "cjson"
+date = require "date"
 
 import concat, insert from table
 import floor from math
@@ -162,10 +163,6 @@ build_url = (parts) ->
   out
 
 time_ago = do
-  -- TODO: make this a dependency
-  local date
-  pcall -> date = require "date"
-
   (time) ->
     diff = date.diff date(true), date(time)
 
