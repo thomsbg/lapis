@@ -176,8 +176,8 @@ tests = {
   }
 
   {
-    -> util.trim "
-      blah blah          "
+    -> util.trim [[
+      blah blah          ]]
     "blah blah"
   }
 
