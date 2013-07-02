@@ -57,7 +57,7 @@ tests = {
 
   {
     -> db.insert "cats", age: 123, name: "catter"
-    [[INSERT INTO "cats" ("name", "age") VALUES ('catter', 123)]]
+    [[INSERT INTO "cats" ("age", "name") VALUES (123, 'catter')]]
   }
 
   {
