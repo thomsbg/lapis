@@ -1,3 +1,4 @@
+local config = require("lapis.config").get()
 local find_nginx
 do
   local nginx_bin = "nginx"
@@ -7,6 +8,7 @@ do
     ""
   }
   local nginx_path
+  nginx_path = config.nginx_path
   find_nginx = function()
     if nginx_path then
       return nginx_path
